@@ -1,0 +1,81 @@
+menu "JMH SoulRecorder"
+
+    config SR_UART_RX_EVT_QUEUE_SIZE
+        int "SR UART Rx event queue size"
+        range 0 256
+        default 128
+        help
+            Size of UART Rx event queue, item counts
+
+    config SR_UART_RX_BUFFER_SIZE
+        int "NMEA Parser Ring Buffer Size"
+        range 0 32768
+        default 8192
+        help
+            Size of Rx buffer, in bytes
+
+    menu "UART1 Pin map"
+
+        config SR_UART1_TX_PIN
+            int "Tx Pin"
+            range -1 64
+            default 1
+            help
+                Tx pin for UART1
+
+        config SR_UART1_RX_PIN
+            int "Rx Pin"
+            range -1 64
+            default 2
+            help
+                Rx pin for UART1
+
+        config SR_UART1_RTS_PIN
+            int "RTS Pin"
+            range -1 64
+            default -1
+            help
+                RTS pin for UART1
+
+        config SR_UART1_CTS_PIN
+            int "CTS Pin"
+            range -1 64
+            default -1
+            help
+                CTS pin for UART1
+
+    endmenu
+
+    menu "UART2 Pin map"
+
+        config SR_UART2_TX_PIN
+            int "Tx Pin"
+            range -1 64
+            default 1
+            help
+                Tx pin for UART2
+
+        config SR_UART2_RX_PIN
+            int "Rx Pin"
+            range -1 64
+            default 2
+            help
+                Rx pin for UART2
+
+        config SR_UART2_RTS_PIN
+            int "RTS Pin"
+            range -1 64
+            default -1
+            help
+                RTS pin for UART2
+
+        config SR_UART2_CTS_PIN
+            int "CTS Pin"
+            range -1 64
+            default -1
+            help
+                CTS pin for UART2
+
+    endmenu
+
+endmenu
