@@ -1,15 +1,11 @@
-//
-// Created by hu on 30/12/23.
-//
+#pragma once
 
-#ifndef MAIN_STORAGE_MANAGER_HPP
-#define MAIN_STORAGE_MANAGER_HPP
-
+#include <esp_err.h>
 
 class storage_manager
 {
-
+public:
+    esp_err_t init(const char *path);
+    esp_err_t append_data(uint8_t *buf, size_t len);
 };
 
-
-#endif //MAIN_STORAGE_MANAGER_HPP
